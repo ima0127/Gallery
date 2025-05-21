@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+ul ,li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
+
+header{
+  position: sticky;
+  top: 0;          /* Se pega al llegar al borde superior */
+  z-index: 100;
+  display: flex;
+  justify-content: space-between; /* Separa logo y nav a extremos */
+  align-items: center;            /* Centra verticalmente */
+  padding: 1rem;
+  background: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#logo {
+    margin: 0;
+  /* Degradado neón (colores RGB vibrantes) */
+  background: linear-gradient(
+    to right,
+    #ff0000,    /* Rojo neón */
+    #ff9900,    /* Naranja brillante */
+    #ffff00,    /* Amarillo neón */
+    #33ff00,    /* Verde neón */
+    #00ccff,    /* Azul brillante */
+    #cc00ff,    /* Púrpura neón */
+    #ff00ff     /* Magenta neón */
+  );
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Arial Black', sans-serif;
+  
+  /* Sombra neón (brillo) */
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 0, 0, 0.7),
+    0 0 30px rgba(255, 153, 0, 0.6),
+    0 0 40px rgba(255, 255, 0, 0.5),
+    0 0 50px rgba(51, 255, 0, 0.4),
+    0 0 60px rgba(0, 204, 255, 0.3);
+  
+  /* Animación de brillo (opcional) */
+  animation: neon-glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glowing {
+  from {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 153, 0, 0.4),
+      0 0 20px rgba(255, 255, 0, 0.3),
+      0 0 25px rgba(51, 255, 0, 0.2),
+      0 0 30px rgba(0, 204, 255, 0.1);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 0, 0, 0.7),
+      0 0 30px rgba(255, 153, 0, 0.6),
+      0 0 40px rgba(255, 255, 0, 0.5),
+      0 0 50px rgba(51, 255, 0, 0.4),
+      0 0 60px rgba(0, 204, 255, 0.3);
+  }
+}
+nav ul {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre items del menú */
+  list-style: none; /* Elimina puntos de la lista */
+  padding: 0;       /* Elimina padding predeterminado */
+  margin: 0;        /* Elimina margen predeterminado */
+  font-family: 'Courier New', Courier, monospace;
+}
+li a:hover{
+    transition: 0.5s;
+    font-size: 1.3rem;
+}
