@@ -94,7 +94,28 @@ main{
   padding: 5px 16px 5 px 16px;
   border-radius: 5px;
 }
-
+#frame{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start; /* Alinea líneas al inicio verticalmente */
+  align-items: flex-start;
+  flex-direction: row;
+}
+.color{
+  background-color: pink;
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.color:hover{
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.links{
+  text-decoration: none;margin: auto;
+}
 aside{
   max-width: 300px;
   max-height: 400px;
