@@ -9,71 +9,57 @@ li a{
 }
 
 header{
+  padding: 1rem 5rem 1rem 5rem;
   position: sticky;
   top: 0;          /* Se pega al llegar al borde superior */
   z-index: 100;
   display: flex;
   justify-content: space-between; /* Separa logo y nav a extremos */
   align-items: center;            /* Centra verticalmente */
-  padding: 1rem;
-  background: #f8f8f8;
+  background: #222831;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 #logo {
-    margin: 0;
-  /* Degradado neón (colores RGB vibrantes) */
-  background: linear-gradient(
-    to right,
-    #ff0000,    /* Rojo neón */
-    #ff9900,    /* Naranja brillante */
-    #ffff00,    /* Amarillo neón */
-    #33ff00,    /* Verde neón */
-    #00ccff,    /* Azul brillante */
-    #cc00ff,    /* Púrpura neón */
-    #ff00ff     /* Magenta neón */
-  );
-  
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  margin: 0;
+   font-family: 'Arial', sans-serif;
   font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'Arial Black', sans-serif;
-  
-  /* Sombra neón (brillo) */
-  text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 0, 0, 0.7),
-    0 0 30px rgba(255, 153, 0, 0.6),
-    0 0 40px rgba(255, 255, 0, 0.5),
-    0 0 50px rgba(51, 255, 0, 0.4),
-    0 0 60px rgba(0, 204, 255, 0.3);
-  
-  /* Animación de brillo (opcional) */
-  animation: neon-glowing 1.5s ease-in-out infinite alternate;
+  color: #00ffff;
+  text-align: center;
+  /* Neón efecto */
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 0px #00ffff,
+    0 0 0px #00ffff;
+  text-shadow:
+  -1px -1px 0 #000,
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000;
 }
+#logo:hover {
+    display: inline-block;
+    animation-name: wave;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+    
+  }
+  #logo:nth-child(odd) {
+    animation-delay: 0.1s;
+  }
+   #logo:nth-child(even) {
+    animation-delay: 0.3s;
+  }
 
-@keyframes neon-glowing {
-  from {
-    text-shadow: 
-      0 0 5px rgba(255, 255, 255, 0.3),
-      0 0 10px rgba(255, 0, 0, 0.5),
-      0 0 15px rgba(255, 153, 0, 0.4),
-      0 0 20px rgba(255, 255, 0, 0.3),
-      0 0 25px rgba(51, 255, 0, 0.2),
-      0 0 30px rgba(0, 204, 255, 0.1);
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
-  to {
-    text-shadow: 
-      0 0 10px rgba(255, 255, 255, 0.5),
-      0 0 20px rgba(255, 0, 0, 0.7),
-      0 0 30px rgba(255, 153, 0, 0.6),
-      0 0 40px rgba(255, 255, 0, 0.5),
-      0 0 50px rgba(51, 255, 0, 0.4),
-      0 0 60px rgba(0, 204, 255, 0.3);
-  }
-}
 nav ul {
   display: flex;
   gap: 1.5rem; /* Espacio entre items del menú */
@@ -82,7 +68,138 @@ nav ul {
   margin: 0;        /* Elimina margen predeterminado */
   font-family: 'Courier New', Courier, monospace;
 }
+li a{
+  color: #E3EEB2;
+}
 li a:hover{
     transition: 0.5s;
     font-size: 1.3rem;
+}
+
+#all{
+  display: flex;
+  flex-direction: row;
+  margin:1rem 5rem 1rem 5rem;
+  height: 90%;
+  margin-top: 0;
+  padding-top: 2rem;
+}
+main{
+    background-color: #F2F2F2;
+}
+#content{
+  width: 70%;
+  height: 90%;
+  box-shadow: 0px 0px 5px 1px;
+  padding: 5px 16px 5 px 16px;
+  border-radius: 5px;
+}
+
+aside{
+  max-width: 300px;
+  max-height: 400px;
+  margin: 10px 30px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+#button{
+  width: 8rem;
+  height: 2.5rem;
+  background-color: #0E2148;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+footer{
+  
+}
+
+
+
+footer .logo-footer{
+    padding: 110px 0 0 0;
+}
+
+footer .logo-footer img{
+    border-radius:150px;
+    
+}
+
+.Dark footer .logo-footer img{
+    border:5px solid #313131;
+}
+
+.container-footer{
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Dark .container-footer footer .redes-footer .icon-redes-footer{
+    background: #313131;
+}
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+}
+
+
+
+.container-footer footer .redes-footer .fa-linkedin-in:hover{
+    background: #2591c4;
+    color: #fff;
+}
+
+.container-footer footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443AB) ;
+    color: #fff;
+}
+
+.container-footer footer .redes-footer .fa-github:hover{
+    background: black;
+    color: #fff;
+}
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #e0dcdc;
+}
+
+
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500;
 }
