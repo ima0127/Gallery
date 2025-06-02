@@ -1,0 +1,64 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+#uWallpaper{
+
+}
+
+#imgSeleccionada{
+
+}
+#downloadBtn{
+    width: 7rem;
+    background-color: rgb(225, 235, 243);
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    transition: all 0.3s ease
+}
+
+#downloadBtn:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.monitor {
+  width: 600px;
+  height: 400px;
+  background-color: #222;
+  border: 10px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  position: relative;
+  margin: 50px auto;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#imgSeleccionada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes it look like a real wallpaper */
+  transition: transform 0.5s ease;
+}
+
+#imgSeleccionada:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+}
+
+.stand {
+  width: 150px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+  position: relative;
+  top: -10px;
+}

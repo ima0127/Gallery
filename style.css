@@ -62,10 +62,10 @@ header{
   }
 nav ul {
   display: flex;
-  gap: 1.5rem; /* Espacio entre items del menú */
-  list-style: none; /* Elimina puntos de la lista */
-  padding: 0;       /* Elimina padding predeterminado */
-  margin: 0;        /* Elimina margen predeterminado */
+  gap: 1.5rem; 
+  list-style: none; 
+  padding: 0;       
+  margin: 0;        
   font-family: 'Courier New', Courier, monospace;
 }
 li a{
@@ -77,29 +77,27 @@ li a:hover{
 }
 
 #all{
-  display: flex;
+   display: flex;
   flex-direction: row;
-  margin:1rem 5rem 1rem 5rem;
-  height: 90%;
-  margin-top: 0;
-  padding-top: 2rem;
+  align-items: flex-start;
 }
 main{
     background-color: #F2F2F2;
 }
 #content{
-  width: 70%;
-  height: 90%;
+  display: grid;            /* shrink-wrap around content */
+  max-width: 90%;                   /* optional limit */
   box-shadow: 0px 0px 5px 1px;
-  padding: 5px 16px 5 px 16px;
+  padding: 5px 16px;
   border-radius: 5px;
 }
 #frame{
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start; /* Alinea líneas al inicio verticalmente */
+  align-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
+  gap: 1rem; 
 }
 .color{
   background-color: pink;
