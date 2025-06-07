@@ -7,6 +7,12 @@ ul ,li{
 li a{
     text-decoration: none;
 }
+.container {
+  max-width: 1200px;    /* Puedes ajustar este valor según tu diseño */
+  margin: 0 auto;       /* Centra horizontalmente */
+  padding: 1rem 5rem;   /* Igual que lo tenías en el header */
+  box-sizing: border-box;
+}
 
 header{
   padding: 1rem 5rem 1rem 5rem;
@@ -76,28 +82,57 @@ li a:hover{
     font-size: 1.3rem;
 }
 
-#all{
-   display: flex;
+#all {
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
+  max-width: 1700px;   /* o lo que tú prefieras */
+  margin: 0 auto;      /* centrado en la página */
+  gap: 2rem;           /* espacio entre content y aside */
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
 }
+
 main{
     background-color: #F2F2F2;
+    padding-top: 40px;
 }
-#content{
-  display: grid;            /* shrink-wrap around content */
-  max-width: 90%;                   /* optional limit */
+#content {
+  flex: 2;                 /* ocupa más espacio */
+  max-width: 800px;
   box-shadow: 0px 0px 5px 1px;
-  padding: 5px 16px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: white;  /* para que no se pierda visualmente */
+}
+
+aside {
+  flex: 1;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px;
   border-radius: 5px;
 }
-#frame{
+#frame {
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  flex-wrap: wrap;              /* permite que las imágenes se acomoden en múltiples filas */
+  gap: 1rem;                    /* espacio entre imágenes */
+  justify-content: center;      /* centra las filas horizontalmente */
   align-items: flex-start;
-  flex-direction: row;
-  gap: 1rem; 
+}
+#frame img {
+  width: 200px;        /* o el tamaño que quieras */
+  height: auto;
+  object-fit: cover;   /* para que no se deformen si tienen diferentes tamaños */
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px #ccc;
+  transition: transform 0.3s ease;
+}
+
+#frame img:hover {
+  transform: scale(1.05);
 }
 .color{
   background-color: pink;
@@ -127,8 +162,12 @@ aside{
   height: 2.5rem;
   background-color: #0E2148;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+}
+#button:hover{
+    background-color: #223e78;
+
 }
 footer{
   
