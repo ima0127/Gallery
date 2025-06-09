@@ -12,3 +12,5 @@
           document.body.innerHTML = "<p>Imagen no encontrada</p>";
         }
       });
+
+      

@@ -1,0 +1,98 @@
+/* === RESPONSIVE TABLET (≤ 992px) === */
+@media (max-width: 992px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+#nav-menu{
+    font-size: 0.7rem;
+    flex-direction: row;
+  }
+
+
+  #all {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  aside {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  #content {
+    max-width: 100%;
+  }
+
+  #frame img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container-footer footer .redes-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .container-footer footer .redes-footer .icon-redes-footer {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* === RESPONSIVE MÓVIL (≤ 576px) === */
+@media (max-width: 576px) {
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  #logo {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  #frame {
+    gap: 0.5rem;
+  }
+
+  #frame img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #button {
+    width: 100%;
+  }
+
+  .color {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .container-footer footer .redes-footer {
+    justify-content: center;
+  }
+
+  .container-footer footer .logo-footer img {
+    width: 80px;
+  }
+
+  .container-footer h4 {
+    font-size: 0.9rem;
+  }
+}
